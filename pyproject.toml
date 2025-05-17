@@ -4,7 +4,8 @@ dynamic = ["version"]
 description = "Natural language interface for CNV inference from scRNA-Seq data with infercnvpy through MCP."
 readme = "README.md"
 authors = [
-    { name = "author", email = "author@example.com" }
+    { name = "mugpeng", email = "yc47680@um.edu.mo" },
+    { name = "shuang", email = "hsh-me@outlook.com" }
 ]
 requires-python = ">=3.10"
 dependencies = [

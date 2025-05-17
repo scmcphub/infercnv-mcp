@@ -17,7 +17,7 @@ from .util import ul_mcp
 
 class AdataState:
     def __init__(self):
-        self.adata_dic = {"exp": {}}
+        self.adata_dic = {"exp": {}, "cnv": {}}
         self.active_id = None
         self.metadata = {}
         

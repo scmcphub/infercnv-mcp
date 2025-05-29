@@ -22,6 +22,10 @@ You can use infercnv-mcp in most AI clients, plugins, or agent frameworks that s
 - Plugins, like Cline
 - Agent frameworks, like Agno 
 
+## 📚 Documentation
+
+scmcphub's complete documentation is available at https://docs.scmcphub.org
+
 ## 🏎️ Quickstart
 
 ### Install
@@ -35,13 +39,19 @@ you can test it by running
 infercnv-mcp run
 ```
 
-#### Run infercnv-server locally
+#### run infercnv-mcp locally
 Refer to the following configuration in your MCP client:
+
+check path
+```
+$ which infercnv 
+/home/test/bin/infercnv-mcp
+```
 
 ```
 "mcpServers": {
   "infercnv-mcp": {
-    "command": "infercnv-mcp",
+    "command": "/home/test/bin/infercnv-mcp",
     "args": [
       "run"
     ]

@@ -8,23 +8,24 @@ import os
 from ..schema.util import *
 from scmcp_shared.util import add_op_log, savefig, filter_args, forward_request, get_ads
 from scmcp_shared.logging_config import setup_logger
-from scmcp_shared.schema import AdataModel
+from scmcp_shared.schema import AdataInfo
 import pandas as pd
+from scmcp_shared.server import ScanpyUtilMCP
 
-
-
-ul_mcp = FastMCP("InfercnvpyMCP-Util-Server")
+ul_mcp = ScanpyUtilMCP(
+    include_tools=["check_samples"],
+).mcp
 
 
 @ul_mcp.tool()
-async def load_gene_position(
+def load_gene_position(
     request: GenePosParam,
-    adinfo: AdataModel = AdataModel()
+    adinfo: AdataInfo = AdataInfo()
 ):
-    """Load gene position file and add to adata.var."""
+    """Load gene position file and add to adata.var when finished reading adata."""
     logger = setup_logger()
     try:
-        result = await forward_request("load_gene_position", request, adinfo)
+        result = forward_request("load_gene_position", request, adinfo)
         if result is not None:
             return result
         adata = get_ads().get_adata(adinfo=adinfo)

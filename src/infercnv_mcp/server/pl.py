@@ -20,14 +20,14 @@ pl_mcp = ScanpyPlottingMCP(
 ).mcp
 
 @pl_mcp.tool()
-async def chromosome_heatmap(
+def chromosome_heatmap(
     request: ChromosomeHeatmapParam,
     adinfo: CNVAdataInfo = CNVAdataInfo()
 ):
     """Plot a heatmap of smoothed gene expression by chromosome.
     """
     try:
-        if (res := await forward_request("pl_chromosome_heatmap", request, adinfo)) is not None:
+        if (res := forward_request("pl_chromosome_heatmap", request, adinfo)) is not None:
             return res
         adata = get_ads().get_adata(adinfo=adinfo)
         fig_path = sc_like_plot(cnv.pl.chromosome_heatmap, adata, request, adinfo)

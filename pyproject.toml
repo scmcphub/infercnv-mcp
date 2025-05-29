@@ -12,6 +12,7 @@ dependencies = [
     "fastmcp>=2.4",
     "scanpy",
     "infercnvpy",
+    "nest_asyncio",
     "scmcp-shared>=0.3.0",
 ]
 

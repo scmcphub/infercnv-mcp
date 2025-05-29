@@ -2,8 +2,7 @@ import pytest
 
 @pytest.fixture
 def mcp():
-    from infercnv_mcp.server import mcp, module_dic 
-    from scmcp_shared.util import setup_mcp
+    from infercnv_mcp.server import InferCNVMCPManager
 
-    mcp = setup_mcp(mcp, module_dic)
+    mcp = InferCNVMCPManager("infercnv-mcp").mcp
     return mcp

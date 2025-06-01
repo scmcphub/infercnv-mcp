@@ -12,6 +12,3 @@ cli = MCPCLI(
     help_text="InferCNV MCP Server CLI",
     manager=InferCNVMCPManager
 )
-
-def run_cli():
-    cli.app()

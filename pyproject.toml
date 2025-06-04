@@ -35,3 +35,8 @@ path = "src/infercnv_mcp/__init__.py"
 [tool.pytest.ini_options]
 asyncio_mode = "strict"
 asyncio_default_fixture_loop_scope = "function" 
+
+[project.urls]
+Homepage = "http://scmcphub.org/"
+Repository = "https://github.com/scmcphub/infercnv-mcp"
+Documentation = "https://docs.scmcphub.org/"

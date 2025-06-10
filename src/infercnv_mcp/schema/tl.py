@@ -11,8 +11,7 @@ from pydantic import (
     BaseModel
 )
 from typing import Optional, Union, List, Dict, Any, Literal, Sequence
-from scmcp_shared.schema import AdataModel
-from scmcp_shared.schema.tl import LeidenModel
+
 
 class InferCNVParam(BaseModel):
     """Input schema for the infercnv tool."""
